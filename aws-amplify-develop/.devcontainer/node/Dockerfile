@@ -16,10 +16,11 @@ RUN echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/${USER_NAME} \
 COPY --chown=${GROUP_NAME}:${USER_NAME} ./ssh /home/${USER_NAME}/.ssh
 COPY --chown=${GROUP_NAME}:${USER_NAME} ./aws /home/${USER_NAME}/.aws
 
+RUN npm install -g @aws-amplify/cli gatsby-cli
+
 RUN mkdir /home/$USER_NAME/aws-amplify-jamstack \
     && chown -R ${GROUP_NAME}:${USER_NAME} /home/$USER_NAME/aws-amplify-jamstack
 
 USER vscode
 WORKDIR /home/$USER_NAME/aws-amplify-jamstack
-RUN git clone -b master git@github.com:mori-hisayuki/aws-amplify-jamstack.git /home/$USER_NAME/aws-amplify-jamstack \
-    && yarn global add @aws-amplify/cli
+RUN git clone -b master git@github.com:mori-hisayuki/aws-amplify-jamstack.git /home/$USER_NAME/aws-amplify-jamstack
