@@ -5,14 +5,13 @@ services:
       context: .
       dockerfile: ./node/Dockerfile
       args:
-        USER_NAME: vscode
-        GROUP_NAME: vscode
+        USER_NAME: zenn_writer
+        GROUP_NAME: zenn_writer
         USER_UID: 1000
         USER_GID: 1000
     env_file: devcontainer.env
     environment:
       - TZ=JST-9
     volumes:
-      - ..:/home/vscode/develop_container
-      - ../../../../notes:/home/vscode/notes:cached
+      - ../../../../notes:/home/zenn_writer/notes:cached
     command: /bin/sh -c "while sleep 1000; do :; done"
