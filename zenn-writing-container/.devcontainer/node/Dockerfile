@@ -14,9 +14,9 @@ COPY --chown=${GROUP_NAME}:${USER_NAME} ./ssh /home/${USER_NAME}/.ssh
 
 RUN npm install -g zenn-cli@latest
 
-RUN mkdir /home/$USER_NAME/zenn-writing \
+RUN mkdir /home/$USER_NAME/contents \
     && chown -R ${GROUP_NAME}:${USER_NAME} /home/$USER_NAME/contents
 
 USER $USER_NAME
-WORKDIR /home/$USER_NAME/zenn-writing
+WORKDIR /home/$USER_NAME/contents
 RUN git clone git@github.com:mori-hisayuki/zenn-content.git /home/$USER_NAME/contents
