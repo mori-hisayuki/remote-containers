@@ -27,21 +27,13 @@
 		"formulahendry.auto-rename-tag",
 		"mhutchie.git-graph",
 		"vscode-icons-team.vscode-icons",
-		"dbaeumer.vscode-eslint",
-		"vector-of-bool.gitflow",
 		"eamodio.gitlens",
+		"yzhang.markdown-all-in-one",
+		"davidanson.vscode-markdownlint",
 		"oderwat.indent-rainbow",
-		"firsttris.vscode-jest-runner",
-		"ionutvmi.path-autocomplete",
-		"christian-kohler.path-intellisense",
 		"esbenp.prettier-vscode",
-		"humao.rest-client",
 		"tabnine.tabnine-vscode",
-		"fabiospampinato.vscode-todo-plus",
-		"yokawasa.jwt-debugger",
-		"patricklee.vsnotes",
-		"github.vscode-pull-request-github",
-		"austin.vscode-twitter"
+		"patricklee.vsnotes"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
